@@ -1,5 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+<<<<<<< HEAD
+=======
+using System.Linq;
+>>>>>>> Kata00
 
 namespace Kata00
 {
@@ -12,25 +16,35 @@ namespace Kata00
             //Return an array of valid hash values, and eliminate any duplicates
 
             string[] hashValue = new String[] { "asdfiasdfg", "jsdfasdf14", "a212sdf345", "as00yud567",
-                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g" };
+                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g", "12gh34gh1g", "as00yud567", "a212sdf345" };
+
+            string[] NoDupsHashValue = CheckDuplicates(hashValue);
 
             List<String> outputString = new List<String>();
-            for (int i = 0; i < hashValue.Length; i++)
+            for (int i = 0; i < NoDupsHashValue.Length; i++)
             {
-                if (StringSort(hashValue[i]))
+                if (StringSort(NoDupsHashValue[i]))
                 {
-                    outputString.Add(hashValue[i]);
+                    outputString.Add(NoDupsHashValue[i]);
                 }
             }
 
             String[] outputHashValue = outputString.ToArray();
-
             for (int i = 0; i < outputHashValue.Length; i++)
             {
                 Console.WriteLine(outputHashValue[i]);
             }
 
+            Console.WriteLine("\nEnter any key to exit...");
             Console.ReadLine();
+
+            string[] CheckDuplicates(string[] pHashValue)
+            {
+                List<String> distinctHashValues = new List<String>();
+                var distinctNames = (from d in pHashValue select d).Distinct();
+                distinctHashValues = distinctNames.ToList();
+                return distinctHashValues.ToArray();
+            }
 
             bool StringSort(string pHashValue)
             {
