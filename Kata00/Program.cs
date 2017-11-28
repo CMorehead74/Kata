@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace Kata00
 {
@@ -12,7 +13,7 @@ namespace Kata00
             //Return an array of valid hash values, and eliminate any duplicates
 
             string[] hashValue = new String[] { "asdfiasdfg", "jsdfasdf14", "a212sdf345", "as00yud567",
-                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g" };
+                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g", "12gh34gh1g", "as00yud567", "a212sdf345" };
 
             string[] NoDupsHashValue = CheckDuplicates(hashValue);
 
@@ -36,10 +37,10 @@ namespace Kata00
 
             string[] CheckDuplicates(string[] pHashValue)
             {
-                //using Linq:
-                //var equal = Enumerable.SequenceEqual(a, b);
-                //bool areEqual = a.SequenceEqual(b);
-                return pHashValue;
+                List<String> distinctHashValues = new List<String>();
+                var distinctNames = (from d in pHashValue select d).Distinct();
+                distinctHashValues = distinctNames.ToList();
+                return distinctHashValues.ToArray();
             }
 
             bool StringSort(string pHashValue)
