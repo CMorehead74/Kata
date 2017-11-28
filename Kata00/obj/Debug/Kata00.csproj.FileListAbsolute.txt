@@ -5,3 +5,10 @@ C:\Users\cmorehead\Desktop\Kata00\Kata00\obj\Debug\Kata00.csprojResolveAssemblyR
 C:\Users\cmorehead\Desktop\Kata00\Kata00\obj\Debug\Kata00.csproj.CoreCompileInputs.cache
 C:\Users\cmorehead\Desktop\Kata00\Kata00\obj\Debug\Kata00.exe
 C:\Users\cmorehead\Desktop\Kata00\Kata00\obj\Debug\Kata00.pdb
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\bin\Debug\Kata00.exe.config
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\bin\Debug\Kata00.exe
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\bin\Debug\Kata00.pdb
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\obj\Debug\Kata00.csprojResolveAssemblyReference.cache
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\obj\Debug\Kata00.csproj.CoreCompileInputs.cache
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\obj\Debug\Kata00.exe
+C:\Users\cmorehead\Desktop\KataProjects\Kata00\obj\Debug\Kata00.pdb
