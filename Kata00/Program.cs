@@ -1,8 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Kata00
 {
@@ -16,7 +13,7 @@ namespace Kata00
 
             string[] hashValue = new String[] { "asdfiasdfg", "jsdfasdf14", "a212sdf345", "as00yud567",
                 "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g" };
-
+       
             List<String> outputString = new List<String>();
             for (int i = 0; i < hashValue.Length; i++)
             {
@@ -27,13 +24,17 @@ namespace Kata00
             }
 
             String[] outputHashValue = outputString.ToArray();
-
             for (int i = 0; i < outputHashValue.Length; i++)
             {
                 Console.WriteLine(outputHashValue[i]);
             }
 
             Console.ReadLine();
+
+            bool CheckDuplicate(string pHashValue)
+            {
+                return false;
+            }
 
             bool StringSort(string pHashValue)
             {
