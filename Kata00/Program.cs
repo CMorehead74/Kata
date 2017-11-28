@@ -13,13 +13,15 @@ namespace Kata00
 
             string[] hashValue = new String[] { "asdfiasdfg", "jsdfasdf14", "a212sdf345", "as00yud567",
                 "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g" };
-       
+
+            string[] NoDupsHashValue = CheckDuplicates(hashValue);
+
             List<String> outputString = new List<String>();
-            for (int i = 0; i < hashValue.Length; i++)
+            for (int i = 0; i < NoDupsHashValue.Length; i++)
             {
-                if (StringSort(hashValue[i]))
+                if (StringSort(NoDupsHashValue[i]))
                 {
-                    outputString.Add(hashValue[i]);
+                    outputString.Add(NoDupsHashValue[i]);
                 }
             }
 
@@ -29,11 +31,15 @@ namespace Kata00
                 Console.WriteLine(outputHashValue[i]);
             }
 
+            Console.WriteLine("\nEnter any key to exit...");
             Console.ReadLine();
 
-            bool CheckDuplicate(string pHashValue)
+            string[] CheckDuplicates(string[] pHashValue)
             {
-                return false;
+                //using Linq:
+                //var equal = Enumerable.SequenceEqual(a, b);
+                //bool areEqual = a.SequenceEqual(b);
+                return pHashValue;
             }
 
             bool StringSort(string pHashValue)
