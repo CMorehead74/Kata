@@ -13,7 +13,8 @@ namespace Kata00
             //Return an array of valid hash values, and eliminate any duplicates
 
             string[] hashValue = new String[] { "asdfiasdfg", "jsdfasdf14", "a212sdf345", "as00yud567",
-                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g", "12gh34gh1g", "as00yud567", "a212sdf345" };
+                "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah", "12gh34gh1g", "12gh34gh1g",
+                "as00yud567", "a212sdf345", "asdfiasdfg", "Corey12345" };
 
             string[] NoDupsHashValue = CheckDuplicates(hashValue);
 

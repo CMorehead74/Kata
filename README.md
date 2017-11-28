@@ -1,4 +1,4 @@
-# Kata00
+# Kata
 A file's hash value is essentially a string of numbers and letters of fixed length, that functions as a cryptographic fingerprint for that file.
 
 File hashes are commonly used in cyber security to identify different strains of malware, with a unique hash value corresponding to each malware file.
