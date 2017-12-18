@@ -10,20 +10,17 @@ namespace Kata01
     {
         static void Main(string[] args)
         {
-            //5 numbers (lowercase), 5 letter
-            //return array no dups
-
-
             string[] hashVaules = new string[] {    "asdfi12345", "jsdfasdf14", "a212sdf345",
-                                                    "as00yud567", "as34asd567", "agsdgreast",
-                                                    "1dfg23asd4", "hjkjw98076", "fdsqweqrah",
-                                                    "12gh34gh1g", "Corey12345", "sarah54321",
-                                                    "corey12345", "Sarah54321", "corey12345" };
+                    "as00yud567", "as34asd567", "agsdgreast", "1dfg23asd4", "hjkjw98076", "fdsqweqrah",
+                    "12gh34gh1g", "Corey12345", "sarah54321", "corey12345", "Sarah54321", "corey12345" };
 
             for (int i = 0; i < hashVaules.Length; i++)
             {
                 CountingNumbersLetters(hashVaules[i]);
             }
+
+            CheckForDuplicates(outputHashList);
+
             for (int i = 0; i < outputHashList.Count; i++)
             {
                 Console.WriteLine(outputHashList[i]);
@@ -49,6 +46,12 @@ namespace Kata01
             }
             if (numCount == 5 && letterCount == 5)
                 outputHashList.Add(hashValue);
+        }
+
+        private static List<string> CheckForDuplicates(List<string> hashValueList)
+        {
+            var distinctNames = (from d in hashValueList select d).Distinct();
+            return outputHashList = distinctNames.ToList();
         }
     }
 }
