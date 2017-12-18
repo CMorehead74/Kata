@@ -13,58 +13,42 @@ namespace Kata01
             //5 numbers (lowercase), 5 letter
             //return array no dups
 
-            List<string> outputHashList = new List<string>();
-            string[] hashVaules = new string[] { "asdfi12345", "jsdfasdf14" };
-            //, "a212sdf345",
-            //"as00yud567", "as34asd567", "agsdgreast", "1dfg23asd4",
-            //"hjkjw98076", "fdsqweqrah", "12gh34gh1g", "Corey12345", "sarah54321"
+
+            string[] hashVaules = new string[] {    "asdfi12345", "jsdfasdf14", "a212sdf345",
+                                                    "as00yud567", "as34asd567", "agsdgreast",
+                                                    "1dfg23asd4", "hjkjw98076", "fdsqweqrah",
+                                                    "12gh34gh1g", "Corey12345", "sarah54321",
+                                                    "corey12345", "Sarah54321", "corey12345" };
 
             for (int i = 0; i < hashVaules.Length; i++)
             {
-
-                String[] temp = CountingNumbersLetters(hashVaules[i]);
-                outputHashList.Add(temp[0]);
-
+                CountingNumbersLetters(hashVaules[i]);
+            }
+            for (int i = 0; i < outputHashList.Count; i++)
+            {
                 Console.WriteLine(outputHashList[i]);
             }
+
             Console.WriteLine("Enter any key to return");
             Console.ReadLine();
         }
 
-        private static string CountingNumbersLetters(string hashValue)
+        private static List<string> outputHashList = new List<string>();
+
+        private static void CountingNumbersLetters(string hashValue)
         {
-            return hashValue;
+            var charValue = hashValue.ToCharArray();
+            var letterCount = 0;
+            var numCount = 0;
+            for (int i = 0; i < charValue.Length; i++)
+            {
+                if (Char.IsLetter(charValue[i]) && Char.IsLower(charValue[i]))
+                    letterCount++;
+                if (Char.IsNumber(charValue[i]))
+                    numCount++;
+            }
+            if (numCount == 5 && letterCount == 5)
+                outputHashList.Add(hashValue);
         }
-
-
-        //private static String[] CountingNumbersLetters(string[] hashVaule)
-        //{
-        //    //loop thru each hashValue
-        //    List<string> listofHashValues = new List<string>();
-        //    foreach (var stringValue in hashVaule)
-        //    {
-        //        var letterCounter = 0;
-        //        var numCounter = 0;
-        //        var charValue = stringValue.ToCharArray();
-        //        for (int i = 0; i < charValue.Length; i++)
-        //        {
-        //            if (Char.IsNumber(charValue[i]))
-        //                numCounter++;
-        //            if (Char.IsLetter(charValue[i]))
-        //                letterCounter++;
-        //        }
-        //        if (numCounter == 5 && letterCounter == 5)
-        //        {
-        //            listofHashValues.Add(stringValue);
-        //        }
-        //        if (listofHashValues.Count() > 0)
-        //        {
-        //            Console.WriteLine(listofHashValues[0]); 
-        //        }
-        //        else
-        //            Console.WriteLine("String is not valid");
-        //    }
-        //    return listofHashValues.ToArray<string>();
-        //}
     }
 }
